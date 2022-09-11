@@ -10,9 +10,20 @@
   top: 90px;
   right: 40px;
   z-index: 5;
+ scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 
   ::-webkit-scrollbar {
-      display: none;
+      background: white;
+      width: 10px;
+  }
+  ::-webkit-scrollbar-track{
+      /* background: green; */
+      /* color: black; */
+  }
+  ::-webkit-scrollbar-thumb{
+      background: black;
+      border-radius: 7px;
   }
   .empty-message {
     font-size: 18px;
