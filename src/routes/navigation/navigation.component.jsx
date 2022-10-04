@@ -6,11 +6,11 @@ import "./navigation.styles.scss";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../component/cart-icon/cart-icon.component.jsx";
 import CartDropDown from "../../component/cart-dropdown/cart-dropdown.component.jsx";
-import {CartContext} from "../../contexts/cart.context.jsx";
+import { CartContext } from "../../contexts/cart.context.jsx";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const {cartDropDownShow} = useContext(CartContext);
+  const { cartDropDownShow } = useContext(CartContext);
 
   // setCartDropDownShow(true);
   const signOutHandler = async () => {
@@ -35,11 +35,11 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
-          <CartIcon/>
+          <CartIcon />
         </div>
-    {cartDropDownShow &&
-        <CartDropDown/>
-    }
+        {cartDropDownShow &&
+          <CartDropDown />
+        }
       </div>
       <Outlet />
     </Fragment>
